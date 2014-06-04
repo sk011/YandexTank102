@@ -1,2 +1,4 @@
 yatank_vagrant
 ==============
+
+master
