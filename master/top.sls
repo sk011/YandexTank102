@@ -1,0 +1,4 @@
+base:
+    '*':
+        - requirements
+        - yandex-load
