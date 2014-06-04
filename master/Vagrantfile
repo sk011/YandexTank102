@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "hashicorp/precise32"
-  config.vm.synced_folder "../", "/srv/salt"
+  config.vm.synced_folder "../master", "/srv/salt"
   config.vm.provision :salt do |salt|
     salt.minion_config = "minion.conf"
     salt.run_highstate = true
@@ -15,8 +15,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.network "private_network", ip: "192.168.56.10"
-  config.vm.network "forwarded_port", guest: 80, host: 8180
+  config.vm.network "forwarded_port", guest: 8080, host: 8180, host_ip: "127.0.0.1"
 
+  # Yandex Tank need 512MB memory
   config.vm.provider "virtualbox" do |v|
     v.customize ["modifyvm", :id, "--memory", "1024"]
   end
