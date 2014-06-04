@@ -1,4 +1,5 @@
 yatank_vagrant
 ==============
 
-master
+Master - vagrant box with Yandex Tank
+Slave - Phalcon box for tests
