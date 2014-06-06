@@ -1,5 +1,4 @@
-yatank_vagrant
-==============
+
 Ubuntu Server 12.04 managed by Vagrant and Saltstack for Yandex.Tank
 Requirements
 ------------
