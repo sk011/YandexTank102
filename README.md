@@ -9,8 +9,8 @@ Requirements
 Install
 -------
 ``` sh
-$ git clone git@github.com:sk011/yatank_vagrant.git
-$ cd yatank_vagrant/master/
+$ git clone https://github.com/sk011/YandexTank102.git
+$ cd YandexTank102/master/
 $ vagrant up
 $ vagrant ssh
 ```
